@@ -201,3 +201,7 @@ footer a{
 body::selection{
     background-color: rgb(252, 9, 1);
 }
+.top:hover{
+    border: 2px solid rgb(252, 39, 1); 
+    background-color: rgb(252, 39, 1);
+    color: white;
