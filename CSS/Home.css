@@ -198,3 +198,6 @@ footer a{
 .inc-dec{
     border: 1px solid gray;
 }
+body::selection{
+    background-color: rgb(252, 9, 1);
+}
