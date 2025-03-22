@@ -209,3 +209,8 @@ body::selection{
 .card img:hover{
     transform: scale(1.02);
 }
+.over-re:hover{
+    border: 1 solid rgb(252, 9, 1);
+    background-color: rgb(252, 9, 1);
+    color: white;
+}
