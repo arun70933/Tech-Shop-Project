@@ -206,3 +206,6 @@ body::selection{
     background-color: rgb(252, 39, 1);
     color: white;
 } 
+.card img:hover{
+    transform: scale(1.02);
+}
