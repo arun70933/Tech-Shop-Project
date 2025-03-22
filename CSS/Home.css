@@ -1,0 +1,194 @@
+#mainlogo{
+    color: whitesmoke;
+    
+}
+.carousel_image{
+    width:40rem;
+    height: 40rem;
+   
+}
+.btn{
+    color:whitesmoke;
+    background-color: orangered;
+}
+.carousel_div{
+    color: whitesmoke;
+    align-content: center;
+   
+}
+.carousel_div h1{
+    font-size: 3rem;
+}
+.carousel_div h5{
+
+    font-size: xx-large;
+    display: inline;
+}
+.original_price{
+    text-decoration: line-through;
+    color:rgba(128, 128, 128, 0.464);
+}
+.featuredProduct{
+    text-align: center;
+    color: white;
+}
+.All{
+    border: 2px solid rgb(252, 39, 1); 
+    background-color: rgb(252, 39, 1);
+    color: white;
+}
+#ProductCards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.cardss .add-to-card{
+    text-decoration: none;
+    
+}
+.star{
+    fill: red;
+} 
+.card{
+    border: 2 solid red;
+}
+.ourAdv{
+    /* text-align: center; */
+    color: white;
+    /* align-content: center; */
+    align-items: center;
+    color: rgb(252, 39, 1);
+}
+footer{
+    
+    justify-content: center;
+    
+ }
+ .footer-start{
+    width: 23%;
+ }
+ .footer-start h2{
+    color: whitesmoke;
+    opacity: 0.7;
+ }
+ .footer-start p{
+    color: whitesmoke;
+    opacity: 0.4;
+    
+ }
+ .footer-start input{
+    background-color: rgb(16, 12, 16);
+    border: 2px solid rgba(245, 245, 245, 0.3);
+    width: 95%;
+    padding: 0.5rem; 
+    border-radius: 2px;  
+ }
+ .footer-start button{
+    background-color: rgb(252, 9, 1);
+    color: whitesmoke;
+    border: none;
+    font-weight: 500;
+    border-radius: 2px;
+ }
+ .footer-list li{
+    list-style-type: none;
+    color: whitesmoke;
+    opacity: 0.4;
+    margin-bottom: 1rem;
+ }
+ .footer-list p{
+    color: whitesmoke;
+    font-weight: bold;
+    opacity: 0.7;
+ }
+ footer p{
+    color: whitesmoke;
+    opacity: 0.5;
+ }
+footer a{
+    text-decoration: none;
+}
+.scrool{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#cost-button{
+    background-color: rgb(252, 9, 1);
+    color: white;
+    border: 1px solid rgb(252, 9, 1);
+}
+#text-container{
+    width: 50rem;
+    margin-top: 7rem;
+}
+.free{
+    color: green;
+}
+#sideimg{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+}
+.productImg{
+    width: 150px;
+  
+}
+#product-Details{
+    display:flex;
+     
+}
+/* .payment{
+    background-color: black;
+    color: white;
+    opacity: 70;
+    border: 5 solid white;
+} */
+.MainImg{
+    margin-left: 0;
+    margin-top: 5rem;
+}
+.b-r{
+    border-radius: 3px;
+}
+.specifications{
+    border: 1 solid rgb(252, 9, 1);
+    background-color: rgb(252, 9, 1);
+    color: white;
+}
+.product-specifications{
+    width: 35rem;
+    margin-bottom: 10rem;
+}
+
+
+.Login-Human{
+    position: relative;
+}
+.Login-Inside{
+    position: absolute;
+    border: 1px solid white;
+    width: 18rem;
+    height: 12rem;
+    display: grid;
+    right: 1rem;
+    top: 40px;
+    color: white;
+    display: none;
+    background-color: black;
+}
+.Login-Human:hover .Login-Inside{
+    display: block;
+
+}
+
+.close-btn  {
+    border: none;
+    background: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.bi-x {
+    color: red;
+    font-size: 2rem;
+}
+

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech-Shop</title>
+    <link href="../CSS/Home.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"  rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"  crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+</head>
+<body class="bg-black">
+
+  <!-- LoginForm -->
+  <Form class=" border border-2 border-secondary bg-dark ps-4 position-relative" style="width: 24rem;" id="my-popover" popover=manual>
+    <button class="close-btn" popovertarget="my-popover" poptargetaction="hide" ><i class="bi bi-x" ></i></button>
+    <h2 class="text-white   opacity: 70">Signup</h2>
+    <p class="text-white opacity-70">Already have an account?<span ><a href="#" class="ms-2 text-white text-decoration-none">Login</a></span></p>
+    <input type="text" class="col-10 mb-3 pt-2 pb-2 bg-dark border border-secondary text-white" placeholder="Username"><br>
+    <input type="text" class="col-10 mb-3 mb-3 pt-2 pb-2 bg-dark border border-secondary text-white" placeholder="Email"><br>
+    <input type="password" class="col-10 mb-3 mb-3 pt-2 pb-2 bg-dark border border-secondary text-white" placeholder="Password"><br>
+    <input type="password" class="col-10 mb-4 mb-3 pt-2 pb-2 bg-dark border border-secondary text-white" placeholder="Confirm Password">
+    <div class="d-grid gap-2 col-10">
+        <button class="btn " type="button" style="background-color: rgb(252, 9, 1); color: white; border-radius: 0;">Signup</button>
+    </div>
+    <div style="display: flex; align-items: center;  margin-bottom: 10px;" class="mt-4">
+        <div style="border-top: 1px solid #ccc; width: 80px;" class="ms-2"></div>
+        <span style="margin: 0 10px; color: white;" class="ps-2 pe-2" >or login with</span>
+        <div style="border-top: 1px solid #ccc; width: 80px;" class="me-2"></div>
+      </div>
+      <div class="mb-4 mt-3 ">
+        <input type="button"  value="Facebook" class="px-3 py-1" style="color: white; background-color: rgb(78, 78, 190); border: 0" >
+        <input type="button" value="Google" class="px-3 py-1 ms-2" style="color: white; background-color:rgb(173, 15, 15); border:0 " >
+        <input type="button" value="Twitter" class="px-3 py-1 ms-2" style="color: white; background-color:rgb(70, 171, 229); border: 0" >
+      </div>
+
+</Form>
+  <!-- Navigational bar -->
+  <nav class="navbar navbar-expand-lg bg-black fixed-top ">
+    <div class="container-fluid" >
+      <a class="navbar-brand fw-bolder fs-1 ms-4" id="mainlogo" href="#">Tech-Shop</a>
+    </div>
+
+    <div class="d-flex gap-5">
+      <button type="button" class="btn " data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-search text-white" viewBox="0 0 16 16"  >
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+        </svg>
+      </button>
+
+      <div class="position-relative">
+
+      <button type="button" class="btn"  data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Cart">
+        <a href="../HTML/Cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-cart3 text-white" viewBox="0 0 16 16" >
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+        </svg>
+          <span class="position-absolute top-0 start-96 translate-middle bg-danger badge rounded-circle ">
+            4 
+          </span></a>
+      </button>
+      </div>
+    
+
+      
+        <div class="Login-Human me-2 pt-2 ">
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person text-white" viewBox="0 0 16 16">
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+        </svg></a>
+        <div class="Login-Inside ps-3 pe-2 pt-2 opacity-50">
+          <h5>Hello!</h5>
+          <p>Access account and manage orders</p>
+         <input type="button" value="Login/signup" class="bg-black border border-secondary text-white text-align-center " popovertarget="my-popover">
+          <hr>
+          <h5>Please login</h5>
+
+        </div>
+        </div>
+      
+    </div>
+  </nav>
+  <!-- Main slider -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex px-5 m-5">
+          <div class="carousel_div d-inline">
+            <h3>boAt Airdopes 131</h3>
+            <h1 class="mb-4">Featherweight For <br />Comfort All-Day.</h1>
+            <h5>₹1,099</h5>
+            <span class="original_price h5 ms-3 opacity-50">₹2,990</span><br />
+            <button
+              type="button"
+              class="btn px-4 mt-5 py-2"
+              style="background-color: rgb(252, 39, 1); color: white"
+            >
+              Shop Now
+            </button>
+          </div>
+          <div class="p-5">
+            <img src="../products/products/boat131-3.png" class="carousel_image" />
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex px-5 m-5">
+          <div class="carousel_div d-inline">
+            <h3>Sony WH-XB910N</h3>
+            <h1 class="mb-4">Give Your Favourite <br />Music A Boost.</h1>
+            <h5>₹13,489</h5>
+            <span class="original_price h5 ms-3 opacity-50">₹19,990</span><br />
+            <button
+              type="button"
+              class="btn px-4 mt-5 py-2"
+              style="background-color: rgb(252, 39, 1); color: white"
+            >
+              Shop Now
+            </button>
+          </div>
+          <div class="p-5">
+            <img src="../products/products/sonyXb910n-1.png" class="carousel_image" />
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex px-5 m-5">
+          <div class="carousel_div d-inline">
+            <h3>JBL Live 660NC</h3>
+            <h1 class="mb-4">Keep The Noise Out, <br />In. Your Choose.</h1>
+            <h5>₹9,999</h5>
+            <span class="original_price h5 ms-3 opacity-50">₹14,999</span><br />
+            <button
+              type="button"
+              class="btn px-4 mt-5 py-2"
+              style="background-color: rgb(252, 39, 1); color: white"
+            >
+              Shop Now
+            </button>
+          </div>
+          <div class="p-5">
+            <img src="../products/products/jbl660nc-1.png" class="carousel_image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Products  -->
+  <h3 class="text-white mb-5" style="text-align: center;">Featured Products</h3>
+  <div class="d-flex justify-content-evenly">
+    <div class="featuredProduct">
+     <div class="product border-none " style="width: 18rem;">
+      <h5 class="card-title mb-4">boAt Airdopes 203</h5>
+      <img src="../products/products/boat203-1.png" class="card-img-top mb-4" alt="...">
+      <div class="card-body">
+       <p class="card-text fw-bold">₹1,074 <span class="text-decoration-line-through opacity-50">₹3,999</span></p>
+      </div>
+    </div>
+    </div>
+    <div class="featuredProduct">
+     <div class="product border-none " style="width: 18rem; ">
+      <h5 class="card-title mb-4">boAt Rockerz 518</h5>
+      <img src="../products/products/boat518-1.png" class="card-img-top mb-4" alt="...">
+      <div class="card-body">
+       <p class="card-text fw-bold">₹1,299 <span class="text-decoration-line-through opacity-50">₹3,990</span></p>
+      </div>
+    </div>
+    </div>
+    <div class="featuredProduct">
+     <div class="product border-none " style="width: 18rem;">
+      <h5 class="card-title mb-4">JBL Tune 760NC</h5>
+      <img src="../products/products/jbl760nc-1.png" class="card-img-top mb-4" alt="...">
+      <div class="card-body">
+       <p class="card-text fw-bold">₹5,999 <span class="text-decoration-line-through opacity-50">₹7,999</span></p>
+      </div>
+    </div>
+    </div>
+    <div class="featuredProduct">
+     <div class="product border-none " style="width: 18rem;">
+      <h5 class="card-title mb-4">boAt Rockerz 255</h5>
+      <img src="../products/products/boat255r-1.png" class="card-img-top mb-4" alt="...">
+      <div class="card-body">
+       <p class="card-text fw-bold">₹899 <span class="text-decoration-line-through opacity-50">₹2,990</span></p>
+      </div>
+    </div>
+    </div>
+    <div class="featuredProduct">
+     <div class="product border-none " style="width: 18rem;">
+      <h5 class="card-title mb-4">JBL Endurance Run Sports</h5>
+      <img src="../products/products/jbl-endu-1.png" class="card-img-top mb-4" alt="...">
+      <div class="card-body">
+       <p class="card-text fw-bold">₹999 <span class="text-decoration-line-through opacity-50">₹1,599</span></p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Top Products -->
+  <h3 class="text-white mb-5 mt-5" style="text-align: center;">Top Products</h3>
+
+  <nav class="navbar navbar-expand-lg bg-black " >
+    <div class="container-fluid mb-5 ">
+     
+      <div class="collapse navbar-collapse d-flex justify-content-evenly" id="navbarNavAltMarkup"  >
+        <div class="navbar-nav " >
+          <a class=" text-white me-5 ms-5 All text-decoration-none px-3"  aria-current="page" href="#">All</a>
+          <a class=" text-white ms-5 me-5 top text-decoration-none px-3" href="#">Headphone</a>
+          <a class=" text-white ms-5 me-5 top text-decoration-none px-3" href="#">Earbuds</a>
+          <a class=" text-white ms-5 me-5 top text-decoration-none px-3" href="#">Earphones</a>
+          <a class=" text-white ms-5 me-5 top text-decoration-none px-3" href="#">Nackbands</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Product  cards -->
+  <div class="container-fluid gap-3 cardss mt-5  mb-5" id="ProductCards">
+    <!-- 1 -->
+  <div class="card bg-dark text-white  border border-secondary border-2" style="width: 22rem;">
+    <a href="../HTML/product_details.html"> <img src="../products/products/jbl660nc-1.png" class="card-img-top "  alt="..."></a>
+      <div class="card-body">
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <h5 class="card-title mt-2">JBL Live 660NC</h5>
+        <p class="card-text">Wireless Over-Ear NC Headphones</p>
+        <hr>
+        <h5 class="card-text fw-bold">₹9,999<span class="text-decoration-line-through opacity-50 ms-2">₹14,999</span></h5>
+       <div class="d-grid ">
+          <button class="btn " style="background-color: rgb(252, 39, 1); color: white; text-decoration: none;"   type="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="card bg-dark text-white border border-secondary border-2" style="width: 22rem;">
+      <img src="../products/products/boat518-1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <h5 class="card-title mt-2">boAt Rockerz 518</h5>
+        <p class="card-text">On-Ear Wireless Headphones</p>
+        <hr>
+        <h5 class="card-text fw-bold">₹1,299<span class="text-decoration-line-through opacity-50 ms-2">₹3,990</span></h5>
+       <div class="d-grid ">
+          <button class="btn " style="background-color: rgb(252, 39, 1); color: white; text-decoration: none;"   type="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="card bg-dark text-white border border-secondary border-2" style="width: 22rem;">
+      <img src="../products/products/boat131-1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <h5 class="card-title mt-2">boAt Airdopes 131</h5>
+        <p class="card-text">Wireless In-Ear Earbuds</p>
+        <hr>
+        <h5 class="card-text fw-bold">₹1,099<span class="text-decoration-line-through opacity-50 ms-2">₹2,990</span></h5>
+       <div class="d-grid ">
+          <button class="btn " style="background-color: rgb(252, 39, 1); color: white; text-decoration: none;"   type="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- 4 -->
+    <div class="card bg-dark text-white border border-secondary border-2" style="width: 22rem;">
+      <img src="../products/products/boat110-1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+       
+        <h5 class="card-title mt-2">boAt BassHeads 110</h5>
+        <p class="card-text">In-Ear Wired Earphones</p>
+        <hr>
+        <h5 class="card-text fw-bold">₹449<span class="text-decoration-line-through opacity-50 ms-2">₹999</span></h5>
+       <div class="d-grid ">
+          <button class="btn " style="background-color: rgb(252, 39, 1); color: white; text-decoration: none;"   type="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- 5 -->
+    <div class="card bg-dark text-white border border-secondary border-2" style="width: 22rem;">
+      <img src="../products/products/boat410-1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <h5 class="card-title mt-2">boAt Rockerz 410</h5>
+        <p class="card-text">Bluetooth & Wired On-Ear Headphones</p>
+        <hr>
+        <h5 class="card-text fw-bold">₹1,599<span class="text-decoration-line-through opacity-50 ms-2">₹2,990</span></h5>
+       <div class="d-grid ">
+          <button class="btn " style="background-color: rgb(252, 39, 1); color: white; text-decoration: none;"   type="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- 6 -->
+    <div class="card bg-dark text-white border border-secondary border-2" style="width: 22rem;">
+      <img src="../products/products/jbl200bt-1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        
+        <h5 class="card-title mt-2">JBL Live 200BT</h5>
+        <p class="card-text">In-Ear Wireless Neckbands</p>
+        <hr>
+        <h5 class="card-text fw-bold">₹3,999<span class="text-decoration-line-through opacity-50 ms-2">₹5,299</span></h5>
+       <div class="d-grid ">
+          <button class="btn " style="background-color: rgb(252, 39, 1); color: white; text-decoration: none;"   type="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- 7 -->
+     
+    <div class="card bg-dark text-white border border-secondary border-2" style="width: 22rem;">
+      <img src="../products/products/sonyXb910n-1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        
+        <h5 class="card-title mt-2">Sony WH-XB910N</h5>
+        <p class="card-text">Wireless Over-Ear Headphones</p>
+        <hr>
+        <h5 class="card-text fw-bold">₹13,489<span class="text-decoration-line-through opacity-50 ms-2">₹19,990</span></h5>
+       <div class="d-grid ">
+          <button class="btn " style="background-color: rgb(252, 39, 1); color: white; text-decoration: none;"   type="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- 8 -->
+    <div class="card bg-dark text-white border border-secondary border-2" style="width: 22rem;">
+      <img src="../products/products/jbl760nc-1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        
+        <h5 class="card-title mt-2">JBL Tune 760NC</h5>
+        <p class="card-text">Wireless Over-Ear NC Headphones</p>
+        <hr>
+        <h5 class="card-text fw-bold">₹5,999<span class="text-decoration-line-through opacity-50 ms-2">₹7,999</span></h5>
+       <div class="d-grid ">
+          <button class="btn " style="background-color: rgb(252, 39, 1); color: white; text-decoration: none;"   type="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- 9 -->
+    <div class="card bg-dark text-white border border-secondary border-2" style="width: 22rem;">
+      <img src="../products/products/boat255r-1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <h5 class="card-title mt-2">boAt Rockerz 225</h5>
+        <p class="card-text">In-Ear Wireless Neckbands</p>
+        <hr>
+        <h5 class="card-text fw-bold">₹899<span class="text-decoration-line-through opacity-50 ms-2">₹2,990</span></h5>
+       <div class="d-grid ">
+          <button class="btn " style="background-color: rgb(252, 39, 1); color: white; text-decoration: none;"   type="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- 10 -->
+    <div class="card bg-dark text-white border border-secondary border-2" style="width: 22rem;">
+      <img src="../products/products/jbl100-1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+       
+        <h5 class="card-title mt-2">JBL Wave 100</h5>
+        <p class="card-text">In-Ear Truly Wireless Earbuds</p>
+        <hr>
+        <h5 class="card-text fw-bold">₹2,999<span class="text-decoration-line-through opacity-50 ms-2">₹6,999</span></h5>
+       <div class="d-grid ">
+          <button class="btn " style="background-color: rgb(252, 39, 1); color: white; text-decoration: none;"   type="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- 11 -->
+    <div class="card bg-dark text-white border border-secondary border-2" style="width: 22rem;">
+      <img src="../products/products/sony1000xm4-1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=" " class="bi bi-star-fill star" viewBox="0 0 16 16">
+          <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+        </svg></a>
+        
+        <h5 class="card-title mt-2">Sony WF-1000XM4</h5>
+        <p class="card-text">Wireless In-Ear NC Headphones</p>
+        <hr>
+        <h5 class="card-text fw-bold">₹19,990<span class="text-decoration-line-through opacity-50 ms-2">₹24,990</span></h5>
+       <div class="d-grid ">
+          <button class="btn " style="background-color: rgb(252, 39, 1); color: white; text-decoration: none;"   type="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- 12 -->
+    <div class="card bg-dark text-white border border-secondary border-2" style="width: 22rem;">
+      
+      <div class="card-body ">
+        <h5 class="card-title position-absolute top-50 start-40  text-align-center ps-5 fs-1  opacity-50">Browse All <br>Products<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+        </svg></h5>
+      </div>
+        
+    </div>
+  </div>
+
+ 
+  <!-- Our Advantages  -->
+
+  <h3 class="text-white mb-5  mt-5" style="text-align: center; " >Our Advantages</h3>
+  <!-- truck -->
+     <div class="container-fluid   ourAdv d-flex gap-5 justify-content-between">
+  <div class="container mt-5 mb-5  ourAdv d-flex gap-4 ms-4">
+    <div class="ourAdv mb-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+      </svg>
+    </div>
+    <div class="text-white">
+      <h6 class="fw-bold">Express Delivery</h6>
+      <p class="opacity-50">Ships in 24 Hours</p>
+    </div>
+  </div>
+    <!-- Shield -->
+    <div class="container mt-5 mb-5  ourAdv d-flex gap-4 ">
+    <div class="ourAdv mb-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-shield-shaded" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 14.933a1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+      </svg>
+      
+    </div>
+    <div class="text-white">
+      <h6 class="fw-bold">Brand Warranty</h6>
+      <p class="opacity-50">100% Original products</p>
+    </div>
+  </div>
+    <!-- tag -->
+    <div class="container mt-5 mb-5  ourAdv d-flex gap-4 ">
+    <div class="ourAdv mb-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-tags-fill" viewBox="0 0 16 16">
+        <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+        <path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043z"/>
+      </svg>
+    </div>
+    <div class="text-white">
+      <h6 class="fw-bold">Exciting Deals</h6>
+      <p class="opacity-50">On all prepaid orders</p>
+    </div>
+    </div>
+    <!-- card -->
+    <div class="container mt-5 mb-5  ourAdv d-flex gap-4 ">
+    <div class="ourAdv mb-4">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-credit-card-fill" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1"/>
+      </svg>
+      
+    </div>
+    <div class="text-white">
+      <h6 class="fw-bold">Secure Payments</h6>
+      <p class="opacity-50">SSL/Secure certificate</p>
+    </div>
+  </div>
+ </div>
+
+ <!-- Footer -->
+<footer class="pt-5 pb-3 bg-dark ">
+  <div class="d-flex gap-5 mb-2 justify-content-around mx-3">
+    
+    <div class="footer-start">
+      <h2>Tech-Shop</h2>
+      <p>
+        Subcribe to our Email alerts to receive early discount offers, and
+        new products info.
+      </p>
+      <input type="text"  placeholder="Email Address*"  class="bg-dark" /><br />
+      <button class="Subcribe px-3 py-1 mt-3">Subscribe</button>
+    </div>
+    <div>
+      <ul class="footer-list">
+        <p>Help</p>
+        <li>FAQs</li>
+        <li>Track Order</li>
+        <li>Cancel Order</li>
+        <li>Return Order</li>
+        <li>Warrantly Info</li>
+      </ul>
+    </div>
+    <div>
+      <ul class="footer-list">
+        <p>Policies</p>
+        <li>Return Policy</li>
+        <li>Security</li>
+        <li>Sitemap</li>
+        <li>Privacy Policy</li>
+        <li>Terms & Conditiond</li>
+      </ul>
+    </div>
+    <div>
+      <ul class="footer-list">
+        <p>Company</p>
+        <li>About Us</li>
+        <li>Contact Us</li>
+        <li>Service Centers</li>
+        <li>Careers</li>
+        <li>Affiliates</li>
+      </ul>
+    </div>
+  </div>
+  <hr class="my-4 opacity-30" style="color: whitesmoke" />
+
+  <div class="d-flex justify-content-between me-5 mt-4">
+    <p class="ms-2">
+      2025|All Rights Reserved Built by|<b> ARUN UDUGUNDLA</b>
+    </p>
+    <nav class="d-flex gap-3">
+      <svg xmlns="http://www.w3.org/2000/svg" width="23"  height="23" fill="gray"  class="bi bi-facebook" viewBox="0 0 16 16" >
+        <path
+          d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="gray" class="bi bi-twitter" viewBox="0 0 16 16">
+        <path
+          d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg" width="23"  height="23" fill="gray" class="bi bi-instagram" viewBox="0 0 16 16" >
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="gray" class="bi bi-linkedin"  viewBox="0 0 16 16" >
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+      </svg>
+    </nav>
+  </div>
+</footer>
+    
+ 
+
+ 
+   
+
+
+  
+
+  
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+      <script>
+        // Initialize tooltips (if not using data-bs-auto-initialize="true")
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+      </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+     crossorigin="anonymous"></script> -->
+</body>
+</html>
